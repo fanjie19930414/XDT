@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <com.kotlin.baselibrary.custom.CustomRoundAngleImageView
+            android:id="@+id/civIconClassName"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"/>
+        
+        <TextView
+                android:id="@+id/tvGradeClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高二1班"
+                android:textColor="@color/text_xdt"
+                android:textSize="16sp"
+                android:layout_toEndOf="@id/civIconClassName"
+                android:layout_marginStart="14dp"
+                android:textStyle="bold"/>
+        
+        <TextView
+                android:id="@+id/tvClassTeacherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="陈钰琪"
+                android:textColor="@color/text_xdt"
+                android:textSize="12sp"
+                android:layout_toEndOf="@id/civIconClassName"
+                android:layout_below="@id/tvGradeClass"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"/>
+        
+        <TextView
+                android:id="@+id/tvClassNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班级号:332546"
+                android:textColor="@color/text_xdt"
+                android:textSize="12sp"
+                android:layout_toEndOf="@id/civIconClassName"
+                android:layout_below="@id/tvClassTeacherName"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="3dp"/>
+        
+        <TextView
+                android:id="@+id/tvJoinClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="加入"
+                android:textSize="14sp"
+                android:background="@drawable/selector_blue_button_join_class"
+                android:textColor="@drawable/selector_join_class_text_color"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_centerInParent="true"
+                android:enabled="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

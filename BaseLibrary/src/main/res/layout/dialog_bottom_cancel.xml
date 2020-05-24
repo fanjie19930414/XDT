@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:background="@drawable/shape_dialog_background"
+              android:orientation="vertical">
+    
+    <LinearLayout
+            android:id="@+id/layout_add_cancel_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/xdt_background"/>
+    
+    <TextView
+            android:id="@+id/tv_cancel_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/common_white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="18sp"/>
+
+</LinearLayout>

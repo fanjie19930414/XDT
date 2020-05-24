@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:background="@color/white">
+	
+	<include
+			android:id="@+id/view_status_bar_height"
+			layout="@layout/view_status_bar"/>
+	
+	<LinearLayout
+			android:layout_below="@id/view_status_bar_height"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:orientation="vertical">
+		
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="70dp"
+				android:background="@mipmap/xdt_logo"/>
+		
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				android:text="欢迎登录学点通"
+				android:textColor="@color/text_xdt"
+				android:textSize="14sp"/>
+		
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="75dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:layout_marginStart="@dimen/dp_40"
+				android:layout_marginEnd="@dimen/dp_40">
+			
+			<EditText
+					android:id="@+id/et_login_account_mobile"
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_weight="1"
+					android:background="@null"
+					android:gravity="center_vertical"
+					android:hint="请输入手机号"
+					android:singleLine="true"
+					android:textColor="@color/login_xdt_et_color"
+					android:textColorHint="#B4B4B4"
+					android:textSize="16sp"
+					android:inputType="number"
+					android:maxLines="1"
+					android:maxLength="11"/>
+			
+			<ImageView
+					android:id="@+id/iv_login_account_del"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@mipmap/icon_del"
+					android:padding="10dp"
+					android:visibility="gone"/>
+		</LinearLayout>
+		
+		<ImageView
+				android:id="@+id/view_login_account_mobile"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="40dp"
+				android:layout_marginEnd="40dp"
+				android:background="@color/line_gray"/>
+		
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="25dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:layout_marginStart="@dimen/dp_40"
+				android:layout_marginEnd="@dimen/dp_40">
+			
+			<EditText
+					android:id="@+id/et_login_account_pwd"
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_weight="1"
+					android:background="@null"
+					android:gravity="center_vertical"
+					android:hint="请输入密码"
+					android:singleLine="true"
+					android:textColor="@color/login_xdt_et_color"
+					android:textColorHint="#B4B4B4"
+					android:textSize="16sp"
+					android:maxLines="1"
+					android:maxLength="16"
+					android:inputType="textPassword"/>
+			
+			<ImageView
+					android:id="@+id/iv_login_account_del_pwd"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@mipmap/icon_del"
+					android:padding="10dp"
+					android:visibility="gone"
+					android:layout_marginEnd="20dp"/>
+			
+			<ImageView
+					android:id="@+id/iv_login_account_eye"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:src="@mipmap/login_hidden"
+					android:padding="5dp"/>
+		</LinearLayout>
+		
+		<ImageView
+				android:id="@+id/view_login_account_pwd"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="40dp"
+				android:layout_marginEnd="40dp"
+				android:background="@color/line_gray"/>
+		
+		<Button
+				android:id="@+id/bt_login_account"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/blue_button_height"
+				android:layout_marginTop="29dp"
+				android:background="@drawable/selector_blue_button"
+				android:gravity="center"
+				android:text="登录"
+				android:textColor="@color/white"
+				android:textSize="18sp"
+				android:enabled="false"
+				android:layout_marginStart="40dp"
+				android:layout_marginEnd="40dp"/>
+		
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:layout_marginStart="40dp"
+				android:layout_marginEnd="40dp">
+			
+			<TextView
+					android:id="@+id/tv_login_quick"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingBottom="10dp"
+					android:paddingTop="10dp"
+					android:text="快捷登录"
+					android:textColor="@color/text_xdt"
+					android:textSize="14sp"
+					android:visibility="visible"/>
+			
+			<TextView
+					android:id="@+id/tv_login_forget"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingBottom="10dp"
+					android:paddingTop="10dp"
+					android:layout_alignParentEnd="true"
+					android:text="重置密码"
+					android:textColor="@color/text_xdt"
+					android:textSize="14sp"
+					android:visibility="visible"/>
+		</RelativeLayout>
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="50dp"
+			android:layout_centerHorizontal="true">
+		
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="登录即代表阅读并同意"
+				android:textColor="@color/text_xdt_hint"
+				android:textSize="12sp"/>
+		
+		<TextView
+				android:id="@+id/tv_login_web_account"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="《隐私协议》"
+				android:textColor="@color/login_xdt_btn_color_able"
+				android:textSize="12sp"/>
+	</LinearLayout>
+
+</RelativeLayout>
+

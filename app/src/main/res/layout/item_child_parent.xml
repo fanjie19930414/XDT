@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    
+    <RelativeLayout
+            android:id="@+id/rlChildrenInfoIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_white">
+        
+        <TextView
+                android:id="@+id/tvParentRelation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textColor="@color/text_xdt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@mipmap/prev_list_r"
+                android:gravity="end"
+                android:drawablePadding="@dimen/dp_10"/>
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civIconParent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/def_head_boy"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/common_white"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

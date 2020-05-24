@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xdt_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_status_bar_height"
+        layout="@layout/view_status_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_bar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivMessageDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tvMessageCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="@color/text_xdt"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_xdt"
+                android:text="系统通知"
+                android:textSize="@dimen/text_large_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMessageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMessageDel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMessageDel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:textColor="@color/text_red"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_btm_del"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/tvMessageDel"
+            android:padding="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

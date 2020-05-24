@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+	
+	<RelativeLayout
+			android:id="@+id/rl_bottomdialogsex_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/shape_dialog_background"
+			android:padding="15dp">
+		
+		<TextView
+				android:id="@+id/tv_bottomdialogsex_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:text="选择性别"
+				android:textColor="@color/text_xdt"
+				android:textSize="18sp"
+				android:layout_centerHorizontal="true"/>
+		
+		<TextView
+				android:id="@+id/tv_bottomdialogsex_cancel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="取消"
+				android:textColor="@color/text_xdt_hint"
+				android:textSize="16sp"
+				android:layout_alignParentEnd="true"/>
+	</RelativeLayout>
+	
+	
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/ll_bottomdialog_item"
+			android:layout_below="@+id/rl_bottomdialogsex_title"
+			android:background="@color/white"
+			android:orientation="horizontal"
+			android:padding="20dp">
+		
+		<LinearLayout
+				android:id="@+id/ll_dialog_boy"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+			
+			<ImageView
+					android:id="@+id/ivDialogBoy"
+					android:layout_width="100dp"
+					android:layout_height="100dp"
+					android:layout_gravity="center"/>
+			
+			<TextView
+					android:id="@+id/tvDialogBoy"
+					android:padding="22dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/login_xdt_et_color"
+					android:textSize="14sp"
+					android:layout_gravity="center"/>
+		
+		</LinearLayout>
+		
+		<LinearLayout
+				android:id="@+id/ll_dialog_girl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:layout_gravity="center">
+			
+			<ImageView
+					android:id="@+id/ivDialogGirl"
+					android:layout_width="100dp"
+					android:layout_height="100dp"
+					android:layout_gravity="center"/>
+			
+			<TextView
+					android:id="@+id/tvDialogGirl"
+					android:padding="22dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/login_xdt_et_color"
+					android:textSize="14sp"
+					android:layout_gravity="center"/>
+		</LinearLayout>
+	
+	
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/xdt_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/ivHomeWorkChooseStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chk_box_on"
+            android:layout_gravity="center"
+            android:layout_marginStart="31dp"
+            android:padding="5dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civIconHomeWorkStudent"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:civ_border_color="@color/common_white"
+            app:civ_border_width="1dp"
+            android:layout_marginStart="@dimen/dp_10"/>
+
+        <TextView
+            android:id="@+id/tvHomeWorkStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_xdt"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginStart="@dimen/dp_10"/>
+    </LinearLayout>
+</LinearLayout>

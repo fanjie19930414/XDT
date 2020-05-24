@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/common_white">
+
+    <include layout="@layout/view_status_bar"/>
+
+    <com.kotlin.baselibrary.custom.HeaderBar
+        android:id="@+id/headerBarClassStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText=""/>
+
+    <LinearLayout
+        android:id="@+id/llClassStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivClassStudent"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/icon_check_box"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvClassStudentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:textColor="@color/text_xdt"
+            android:layout_marginStart="@dimen/dp_10" />
+
+        <ImageView
+            android:id="@+id/ivClassStudentDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/prev_list_d"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dp_10"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNoticeClassStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white" />
+
+    <LinearLayout
+        android:id="@+id/llClassTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivClassTeacher"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/icon_check_box"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvClassTeacherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:textColor="@color/text_xdt"
+            android:layout_marginStart="@dimen/dp_10" />
+
+        <ImageView
+            android:id="@+id/ivClassTeacherRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/prev_list_d"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dp_10"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNoticeClassTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white" />
+</LinearLayout>

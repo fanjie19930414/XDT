@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+    
+    <com.kotlin.baselibrary.custom.CustomRoundAngleImageView
+            android:id="@+id/ivSendHomeWorkImg"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_img_upload"/>
+
+    <ImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/btn_record_play_p"
+        android:visibility="gone"/>
+    
+    <ImageView
+            android:id="@+id/ivSendHomeWorkImgDel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="-10dp"
+            android:layout_toEndOf="@id/ivSendHomeWorkImg"
+            android:src="@mipmap/con_img_del"/>
+
+</RelativeLayout>

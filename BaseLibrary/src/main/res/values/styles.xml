@@ -1,0 +1,39 @@
+<resources>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/title_blue</item>
+        <item name="colorPrimaryDark">@color/text_gray</item>
+        <item name="colorAccent">@color/login_xdt_btn_color_able</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <!-- 加载弹框样式 -->
+    <style name="LightDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--设置是否浮现在activity之上true|false-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!-- 加载弹框样式 -->
+    <style name="LightProgressDialog" parent="LightDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- 底部弹窗-->
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名-->
+    <dbname value="xdt_db" />
+    <!--数据库版本(注意：这个文件的每次更改都需要增加1个版本号)-->
+    <version value="1" />
+
+    <!--在<list>标签里面通过<mapping>定义数据库模型映射类-->
+    <list>
+        <!-- 消息 -->
+        <mapping class="com.kapok.apps.maple.xdt.home.bean.MsgDataDB" />
+    </list>
+</litepal>

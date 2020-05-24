@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xdt_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_status_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_bar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivAddressBookHandleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/text_large_size"
+            android:text="新成员申请"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookChildIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="头像"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civAddressBookHandleIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/def_head_boy"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/common_white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookHandleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="60dp"
+                        android:gravity="end"
+                        android:layout_toStartOf="@id/nameTag"/>
+
+                    <TextView
+                        android:id="@+id/nameTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老师"
+                        android:textColor="#FF6E1E"
+                        android:background="@drawable/shape_gradient_orange2"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="visible"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性别"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookHandleSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookHandleBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/tvBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生日"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookHandleBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llChildren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@color/common_white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家长信息"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAddressBookHandleInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学校"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookHandleEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="未填写"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学历"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookHandleProfession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="未填写"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNoHandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btRefuseApply"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/blue_button_height"
+                    android:layout_marginTop="29dp"
+                    android:background="@drawable/shape_background_corner_hint_fill2"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/btAgreeApply"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/blue_button_height"
+                    android:layout_marginTop="29dp"
+                    android:background="@drawable/house_blue_press_btn"
+                    android:gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btHandleApply"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/blue_button_height"
+                    android:layout_marginTop="29dp"
+                    android:background="@drawable/house_blue_press_btn"
+                    android:gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:enabled="false"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

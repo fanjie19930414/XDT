@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_corner"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvClassNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/class_notice_list"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="发通知"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tvClassHomeWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/class_homework"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="发作业"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tvClassMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/class_books"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="记账"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

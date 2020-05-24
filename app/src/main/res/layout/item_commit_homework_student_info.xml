@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:background="@color/xdt_background">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civCommitHomeWorkStudentIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/yukee" />
+
+    <TextView
+        android:id="@+id/tvCommitStudentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/text_xdt"
+        android:layout_toEndOf="@id/civCommitHomeWorkStudentIcon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tvCommitStudentTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/sp_12"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/prev_list_r"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/xdt_background">
+    
+    <include layout="@layout/view_status_bar"/>
+    
+    <com.kotlin.baselibrary.custom.HeaderBar
+            android:id="@+id/suggestHeaderBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="意见反馈"/>
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:layout_marginTop="12dp">
+        
+        <EditText
+                android:id="@+id/etSuggest"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请写下您对学点通产品的建议或意见，感谢您对我们的支持."
+                android:textSize="14sp"
+                android:textColor="@color/text_xdt"
+                />
+        
+        <TextView
+                android:id="@+id/tvSuggestLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="0/300"
+                android:textColor="@color/text_xdt_hint"/>
+    </RelativeLayout>
+
+</LinearLayout>

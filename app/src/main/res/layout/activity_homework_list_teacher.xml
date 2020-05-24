@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/state_bar"
+                layout="@layout/view_status_bar" />
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkListTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_header_bar_height"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/ivHomeWorkListTeacherBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/common_padding"
+                    android:paddingRight="@dimen/common_padding"
+                    android:src="@drawable/icon_back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkListTeacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/text_xdt"
+                        android:text="班级作业"
+                        android:textSize="@dimen/text_large_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivHomeWorkListTeacherCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/menu_screening_off"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvHomeWorkListTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:background="@color/xdt_background"/>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/FabSendHomeWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/edit_release"
+            app:backgroundTint="#129BF6"
+            app:borderWidth="0dp"
+            app:elevation="5dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="#cccccc" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:background="@drawable/shape_background_left_bottom_corner">
+
+        <include layout="@layout/drawerlayout_homework_list_teacher" />
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

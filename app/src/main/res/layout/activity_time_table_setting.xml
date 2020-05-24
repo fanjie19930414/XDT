@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/xdt_background">
+
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+
+        <TextView
+                android:id="@+id/tv_timetable_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_back"
+                android:text="课程表"
+                android:textSize="16sp"
+                android:textColor="@color/text_xdt"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:visibility="gone"/>
+
+        <ImageView
+                android:id="@+id/mLeftIvTimeTableSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:id="@+id/tv_timetable_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/text_large_size"
+                android:text="设置"/>
+
+        <TextView
+                android:id="@+id/tv_timetable_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="保存"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:textColor="@color/login_xdt_btn_color_able"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/xdt_background">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/common_white">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="15dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学期开始日期"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+
+                <RelativeLayout
+                        android:id="@+id/rl_timetable_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="16dp">
+
+                    <TextView
+                            android:id="@+id/tv_timetable_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="请选择"
+                            android:textColorHint="@color/text_xdt_hint"
+                            android:textColor="@color/login_xdt_et_color"
+                            android:padding="16dp"
+                            android:textSize="16sp"
+                            android:layout_alignParentEnd="true"/>
+
+                    <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/right_arrow"
+                            android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                    layout="@layout/view_line_magin16"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="10dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学期结束日期"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+
+                <RelativeLayout
+                        android:id="@+id/rl_timetable_end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="16dp">
+
+                    <TextView
+                            android:id="@+id/tv_timetable_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="请选择"
+                            android:textColorHint="@color/text_xdt_hint"
+                            android:textColor="@color/login_xdt_et_color"
+                            android:padding="16dp"
+                            android:textSize="16sp"
+                            android:layout_alignParentEnd="true"/>
+
+                    <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/right_arrow"
+                            android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+    
+            <include
+                    layout="@layout/view_line_magin16"/>
+    
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="10dp">
+        
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学期名称"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+        
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="16dp">
+            
+                    <EditText
+                            android:id="@+id/etTimeTableName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="例如2019年秋季学期"
+                            android:textColorHint="@color/text_xdt_hint"
+                            android:textColor="@color/login_xdt_et_color"
+                            android:padding="16dp"
+                            android:textSize="16sp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@null"
+                            android:gravity="right"/>
+            
+                    <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/right_arrow"
+                            android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/xdt_background"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上午课数"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+
+                <RadioGroup
+                        android:id="@+id/rg_timetable_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson0_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="0"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="true"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson1_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="1"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson2_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="2"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson3_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="3"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson4_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="4"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson5_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="5"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson6_morning"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="6"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="false"
+                            android:background="@drawable/selector_timetable_background"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_morning_lesson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/xdt_background"
+                    android:visibility="gone"/>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下午课数"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+
+                <RadioGroup
+                        android:id="@+id/rg_timetable_noon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson0_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="0"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:checked="true"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson1_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="1"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson2_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="2"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson3_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="3"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson4_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="4"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson5_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="5"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+
+                    <RadioButton
+                            android:id="@+id/bt_timetable_lesson6_noon"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="6"
+                            android:textColor="@drawable/selector_timetable_text_color"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_10"
+                            android:background="@drawable/selector_timetable_background"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_noon_lesson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/xdt_background"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/xdt_background"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本学期科目"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:padding="16dp"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="50dp"/>
+
+                <TextView
+                        android:id="@+id/tv_timetable_addlesson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/login_xdt_btn_color_able"
+                        android:textSize="16sp"
+                        android:padding="@dimen/dp_10"/>
+            </RelativeLayout>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tagFlowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:background="@color/white"
+                    android:visibility="visible"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/xdt_background"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

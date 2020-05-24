@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_status_bar_height"
+        layout="@layout/view_status_bar" />
+
+    <LinearLayout
+        android:id="@+id/lay_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlAddressBookTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivAddressBookBackTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="通讯录"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivAddressBookSettingTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:padding="5dp"
+                android:src="@mipmap/nav_add" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAddressBookApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="新的申请"
+            android:textColor="@color/text_xdt"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvAddressBookAsk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/tvAddressBookAsk"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="3"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/common_white"
+            android:background="@drawable/shape_background_circle_red"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/prev_list_r" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/xdt_background" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlAddressBookTeacherList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvAddressBookTeacherNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老师"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivAddressBookTeacherArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/prev_list_d" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/xdt_background" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAddressBookTeacherInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlAddressBookStudentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/tvAddressBookStudentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学生"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivAddressBookStudentArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/xdt_background" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAddressBookStudentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xdt_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_status_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_bar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivAddressBookChildBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvAddressBookChildTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/text_large_size"/>
+
+        <ImageView
+            android:id="@+id/ivAddressBookChildSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/nav_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookChildIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="头像"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civAddressBookChildIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/def_head_boy"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/common_white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookChildName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookChildName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookChildSex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性别"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookChildSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+
+                <include layout="@layout/view_line_magin16"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddressBookChildBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生日"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_xdt"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressBookChildBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="end"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@color/common_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家长信息"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAddressBookParentInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

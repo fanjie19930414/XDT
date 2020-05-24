@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/tvReceiptNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="选项1："
+        android:textColor="@color/text_xdt"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etReceiptContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/tvReceiptNum"
+        android:layout_toStartOf="@id/ivReceiptDel"
+        android:background="@null"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:hint="请输入选项内容"/>
+
+    <ImageView
+        android:id="@+id/ivReceiptDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@mipmap/del_receipt" />
+
+</RelativeLayout>

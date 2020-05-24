@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kapok.apps.maple.xdt">
+
+    <!--  窗口权限   -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 拍照-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 录像 -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读/写 SD卡权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.kotlin.baselibrary.commen.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/xdt_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/xdt_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ME3SQL3NK9cP1aT0LeOuG4QM80xQXyj7" />
+
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <!-- 7.0以上手机拍照问题-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <activity
+            android:name=".usercenter.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登录注册-->
+        <activity
+            android:name=".usercenter.activity.login.LoginMobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.login.LoginAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.login.LoginVerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.login.LoginForgetPWDActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 新手引导-->
+        <activity
+            android:name=".usercenter.activity.IntroduceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_student.EditInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_student.JoinClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.SchoolLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.TeacherEditInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.AddClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.CreateClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.SearchCityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.SearchSchoolListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.activity.introduce_teacher.ChooseGradeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 课程表-->
+        <activity
+            android:name=".timetable.activity.TimeTableSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timetable.activity.timetable_parent.SubjectDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timetable.activity.timetable_teacher.TimeTableTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timetable.activity.timetable_parent.TimeTableParentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timetable.activity.TimeTableChooseSubjectActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 首页-->
+        <activity
+            android:name=".home.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".home.activity.WebViewActivity" />
+
+        <!-- 我的 个人中心-->
+        <activity
+            android:name=".home.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.ChildrenUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.SuggestReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.UserInfoEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.UserInfoEditPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.ParentUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.AddChildActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 班级列表-->
+        <activity
+            android:name=".classlist.activity.ClassDetailTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".classlist.activity.ClassInfoTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".classlist.activity.ClassSelectSubjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".classlist.activity.ClassNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".classlist.activity.ClassDetailParentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".classlist.activity.ClassInfoParentActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 作业-->
+        <activity
+            android:name=".homework.activity.SendHomeWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.HomeWorkChooseClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.HomeWorkClassStudentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.HomeWorkTeacherListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".homework.activity.HomeWorkParentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.CheckHomeWorkTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.CheckHomeWorkParentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".homework.activity.SettingCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homework.activity.SettingCommentItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".homework.activity.StudentAnswerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!--  通知-->
+        <activity
+            android:name=".notice.activity.SendNoticeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".notice.activity.NoticeChooseClassActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".notice.activity.NoticeClassStudentsTeachersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.activity.NoticeTeacherListActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".notice.activity.NoticeParentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.activity.CheckNoticeTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.activity.CheckNoticeParentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.activity.DataStatisticsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--  通讯录-->
+        <activity
+            android:name=".addressbook.activity.AddressBookTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addressbook.activity.AddressBookChildDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addressbook.activity.AddressBookParentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addressbook.activity.AddressBookTeacherDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addressbook.activity.AddressBookNewPersonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addressbook.activity.AddressBookHandleDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--  消息详情页-->
+        <activity android:name=".home.activity.MessageDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--  Utils-->
+        <activity
+            android:name=".utils.PhotoShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.VideoRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <!--  百度服务-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+    </application>
+
+</manifest>

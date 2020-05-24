@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <LinearLayout
+                android:id="@+id/llSchoolLocation"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@color/xdt_background"
+                android:orientation="horizontal">
+            
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_icon"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"/>
+            
+            <EditText
+                    android:id="@+id/etSchoolLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@null"
+                    android:hint="输入学校名称进行搜索"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"/>
+        </LinearLayout>
+        
+        <TextView
+                android:id="@+id/tvSchoolLocationCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="@color/text_xdt"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="16dp"
+                android:padding="5dp"/>
+    </LinearLayout>
+    
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSchoolLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

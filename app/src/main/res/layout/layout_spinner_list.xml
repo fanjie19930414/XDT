@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_background_corner">
+
+    <TextView
+            android:id="@+id/tvChangeWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅更改本周"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+    <TextView
+            android:id="@+id/tvChangeFutureWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更改本周及将来每周"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+    <TextView
+            android:id="@+id/tvChangeAllWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更改本学期所有周"
+            android:gravity="center"
+            android:padding="10dp"/>
+</LinearLayout>

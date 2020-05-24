@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+        
+        <TextView
+                android:id="@+id/tvSubjectNum_morning"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/text_xdt"
+                android:background="@color/common_white"/>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/common_white">
+            
+            <LinearLayout
+                    android:id="@+id/llSubject1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject1_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher1_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"
+                        android:visibility="visible"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject2_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher2_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject3_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher3_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject4_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher4_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject5_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher5_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject6_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher6_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:id="@+id/llSubject7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/common_white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                
+                <TextView
+                        android:id="@+id/tvSubject7_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"/>
+                
+                <TextView
+                        android:id="@+id/tvTeacher7_morning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_xdt_hint"
+                        android:gravity="center"
+                        android:maxLength="3"
+                        android:ellipsize="end"
+                        android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/xdt_timetable_view_background"
+            android:layout_marginStart="25dp"/>
+    
+    
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    
+    <LinearLayout
+            android:id="@+id/ll_bottomdialog_joinClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_dialog_background"
+            android:padding="32dp"
+            android:orientation="vertical">
+        
+        <TextView
+                android:id="@+id/tv_bottomdialog_joinClass_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您将以双双妈妈的身份加入班级，申请后，请等待班主任的审核"
+                android:textColor="@color/text_xdt_hint"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+        
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学校："
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+    
+            <TextView
+                    android:id="@+id/tvBottomDialogSchoolName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XXXXXXX"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+            
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="班级："
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+            
+            <TextView
+                    android:id="@+id/tvBottomDialogClassName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018级高一6班"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+            
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="班主任："
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+            
+            <TextView
+                    android:id="@+id/tvBottomDialogTeacherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陈钰琪"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+            
+            <TextView
+                    android:id="@+id/tvBottomDialogCancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    android:textSize="16sp"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/shape_background_corner_blue"/>
+            
+            <TextView
+                    android:id="@+id/tvBottomDialogJoin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="申请加入"
+                    android:textSize="16sp"
+                    android:textColor="@color/common_white"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/shape_btn_corner8_blue"/>
+        </LinearLayout>
+    
+    </LinearLayout>
+
+</LinearLayout>

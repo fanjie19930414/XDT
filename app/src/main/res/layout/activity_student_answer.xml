@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llAnswerWork"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/lay_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlStudentAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivStudentAnswerBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStudentAnswerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="学生的作答"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/svWorkAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_edit"
+        android:layout_below="@+id/lay_head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civStudentAnswer"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/yukee" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStudentAnswerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvStudentAnswerTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textColor="@color/text_xdt_hint"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStudentAnswerContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/text_xdt"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvStudentAnswerPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@color/xdt_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlCheckHomeWorkTeacherCommentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white">
+
+                <TextView
+                    android:id="@+id/tvParentTeacherComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingStart="16dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="16dp"
+                    android:text="教师点评"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCheckHomeWorkTeacherComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvParentTeacherComment"
+                    android:padding="16dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_above="@id/lay_edit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/xdt_background"/>
+
+    <LinearLayout
+        android:id="@+id/lay_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCreateComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="@mipmap/menu_news_off" />
+
+        <EditText
+            android:id="@+id/etComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入内容"
+            android:maxHeight="120dp"
+            android:maxLength="1000"
+            android:padding="16dp"
+            android:textColor="@color/login_xdt_et_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSendComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:text="发布"
+            android:textColor="@color/login_xdt_btn_color_able"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

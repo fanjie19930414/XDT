@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    
+    <include layout="@layout/view_status_bar"/>
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+        
+        <ImageView
+                android:id="@+id/mLeftIvParent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back"
+                android:layout_centerVertical="true"/>
+        
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+            
+            <TextView
+                    android:id="@+id/mTitleTvParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:textSize="@dimen/text_large_size"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"/>
+            
+            <TextView
+                    android:id="@+id/mSubTitleParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12sp"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+            android:id="@+id/rlTimeTableWeekendParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/time_table_bg"
+            android:visibility="gone">
+        
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTimeTableWeekendParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@color/xdt_timetable_background">
+        
+        <LinearLayout
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeekendMonthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="月"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:id="@+id/llWeekend1Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeekend1Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周一"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend1_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend2Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend2Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周二"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend2_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend3Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend3Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周三"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend3_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend4Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend4Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周四"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend4_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend5Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend5Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周五"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend5_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend6Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend6Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周六"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend6_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+        <LinearLayout
+                android:id="@+id/llWeekend7Parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+        
+            <TextView
+                    android:id="@+id/tvWeekend7Parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周日"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        
+            <TextView
+                    android:id="@+id/tvWeekend7_monthParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvMorningParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            
+            <TextView
+                    android:id="@+id/tvRestParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="午               休"
+                    android:gravity="center"
+                    android:background="@color/xdt_timetable_background"
+                    android:visibility="gone"/>
+            
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvNoonParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

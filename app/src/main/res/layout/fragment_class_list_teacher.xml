@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/common_white">
+
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+
+    <com.kotlin.baselibrary.custom.HeaderBar
+            android:id="@+id/headerBarClassListTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="班级"
+            app:isShowBack="false"/>
+
+    <RelativeLayout
+            android:id="@+id/rlClassListTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp">
+
+            <ImageView
+                    android:id="@+id/ivClassListCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/chk_box_off"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="只看我管理的班级"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_xdt"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvClassListTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/FABClassListTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="46dp"
+                android:src="@mipmap/edit_release"
+                app:backgroundTint="#129BF6"
+                app:elevation="5dp"
+                app:pressedTranslationZ="12dp"
+                app:fabSize="normal"
+                app:borderWidth="0dp"
+                app:rippleColor="#cccccc"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

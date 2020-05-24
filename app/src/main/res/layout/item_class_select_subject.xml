@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlClassListSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@color/common_white">
+    
+    <TextView
+            android:id="@+id/tvClassListSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语文"
+            android:textSize="16sp"
+            android:textColor="@color/text_xdt"/>
+    
+    <ImageView
+            android:id="@+id/ivClassListSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/nav_confirm"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"/>
+
+</RelativeLayout>

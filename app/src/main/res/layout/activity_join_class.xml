@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/xdt_background">
+	
+	<include
+			android:id="@+id/view_status_bar_height"
+			layout="@layout/view_status_bar"/>
+	
+	<com.kotlin.baselibrary.custom.HeaderBar
+			android:id="@+id/headerBar_joinClass"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:titleText="加入班级">
+	</com.kotlin.baselibrary.custom.HeaderBar>
+	
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white">
+		
+		<LinearLayout
+				android:id="@+id/ll_joinclass"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginLeft="16dp">
+			
+			<EditText
+					android:id="@+id/et_joinclass_number"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:background="@null"
+					android:gravity="start"
+					android:padding="16dp"
+					android:hint="请输入6位班级邀请码或班主任手机号进行查询"
+					android:singleLine="true"
+					android:textColor="@color/login_xdt_et_color"
+					android:textColorHint="@color/text_xdt_hint"
+					android:textSize="16sp"
+					android:inputType="number"
+					android:maxLines="1"
+					android:maxLength="11"/>
+			
+			<ImageView
+					android:id="@+id/iv_joinclass_delete"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@mipmap/icon_del"
+					android:layout_gravity="center_vertical"
+					android:padding="10dp"
+					android:visibility="gone"
+					android:layout_marginEnd="16dp"
+					/>
+		</LinearLayout>
+		
+		<Button
+				android:id="@+id/bt_joinclass"
+				android:layout_below="@id/ll_joinclass"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/blue_button_height"
+				android:layout_marginTop="30dp"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="31dp"
+				android:layout_marginRight="31dp"
+				android:background="@drawable/selector_blue_button"
+				android:gravity="center"
+				android:text="查询班级"
+				android:textColor="@color/white"
+				android:textSize="18sp"
+				android:enabled="false"/>
+	</RelativeLayout>
+	
+	<LinearLayout
+			android:id="@+id/rl_joinclass_item"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:layout_marginTop="14dp"
+			android:background="@color/white"
+			android:orientation="vertical"
+			android:visibility="gone">
+		
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="请选择"
+				android:textColor="@color/text_xdt"
+				android:textSize="14sp"
+				android:layout_marginStart="16dp"
+				android:layout_marginTop="20dp"/>
+		
+		<android.support.v7.widget.RecyclerView
+				android:id="@+id/rv_joinclass"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="16dp"/>
+	</LinearLayout>
+</LinearLayout>

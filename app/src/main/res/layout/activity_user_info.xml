@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/xdt_background"
+              android:orientation="vertical">
+    
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+    
+    <com.kotlin.baselibrary.custom.HeaderBar
+            android:id="@+id/headerBarInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="个人资料"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlUserIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:layout_marginTop="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="头像"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/def_head_boy"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/common_white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="40dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <RelativeLayout
+                android:id="@+id/rlUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <RelativeLayout
+                android:id="@+id/rlUserSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"
+                    android:gravity="end"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <RelativeLayout
+                android:id="@+id/rlUserNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系方式"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <RelativeLayout
+                android:id="@+id/rlUserEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/tvUserEducation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"
+                    android:gravity="end"
+                    android:hint="请选择"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"/>
+
+            <RelativeLayout
+                android:id="@+id/rlUserWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/tvUserVocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"
+                    android:hint="请选择"
+                    android:gravity="end"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUserRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:layout_marginTop="12dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_xdt"/>
+
+                <TextView
+                    android:id="@+id/tvUserRelation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_usercenter"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/prev_list_r"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUserExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:layout_marginTop="12dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出登录"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/xdt_exit_text"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="240dp"
+            android:layout_height="5dp"
+            android:max="100"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:progress="1"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

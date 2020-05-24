@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+    
+    <com.kotlin.baselibrary.custom.HeaderBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="创建班级"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="10dp">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所属学校"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rl_relative_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tv_relative_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班级年级"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rl_class_grade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tv_class_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="入学年份"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rl_join_school_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tv_join_school_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班级名称"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <EditText
+                android:id="@+id/et_class_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="start"
+                android:padding="16dp"
+                android:hint="请填写"
+                android:singleLine="true"
+                android:textColor="@color/login_xdt_et_color"
+                android:textColorHint="@color/text_xdt_hint"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                android:maxLength="10"
+                android:layout_marginEnd="@dimen/dp_10"/>
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班"
+                android:textColor="@color/text_xdt"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line"/>
+    
+    <Button
+            android:id="@+id/bt_create_class"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/selector_blue_button"
+            android:gravity="center"
+            android:text="完成创建"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:enabled="false"/>
+
+</LinearLayout>

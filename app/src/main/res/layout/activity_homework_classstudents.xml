@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/common_white">
+
+    <include layout="@layout/view_status_bar"/>
+
+    <com.kotlin.baselibrary.custom.HeaderBar
+        android:id="@+id/headerBarClassStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivClassStudent"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/icon_check_box"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/tvClassStudentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:textColor="@color/text_xdt"
+            android:layout_marginStart="@dimen/dp_10"/>
+
+        <TextView
+            android:id="@+id/tvClassStudentNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/login_xdt_btn_color_able"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvHomeWorkClassStudent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_white" />
+</LinearLayout>

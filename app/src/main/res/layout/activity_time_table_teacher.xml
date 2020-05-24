@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+    
+    <include
+            android:id="@+id/state_bar"
+            layout="@layout/view_status_bar"/>
+    
+    <RelativeLayout
+            android:id="@+id/rlEditTimeTable"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white"
+            android:visibility="gone">
+        
+        <ImageView
+                android:id="@+id/mLeftIvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@mipmap/pop_right_del"
+                android:layout_centerVertical="true"
+                android:padding="16dp"/>
+        
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+            
+            <TextView
+                    android:id="@+id/mTitleTvEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:textSize="@dimen/text_large_size"
+                    android:text="课程表"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"/>
+            
+            <TextView
+                    android:id="@+id/mSubTitleEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12sp"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:visibility="visible"/>
+        </LinearLayout>
+        
+        <ImageView
+                android:id="@+id/ivTimeTableSettingEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nav_confirm"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:padding="10dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+            android:id="@+id/rlTimeTable"
+            android:layout_below="@id/rlEditTimeTable"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+        
+        <ImageView
+                android:id="@+id/mLeftIv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back"
+                android:layout_centerVertical="true"/>
+        
+        <LinearLayout
+                android:id="@+id/llTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+            
+            <TextView
+                    android:id="@+id/mTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:textSize="@dimen/text_large_size"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"/>
+            
+            <TextView
+                    android:id="@+id/mSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="12sp"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:visibility="visible"/>
+        </LinearLayout>
+        
+        <ImageView
+                android:id="@+id/ivTimeTableSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nav_setting"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:padding="10dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+            android:id="@+id/rlTimeTableWeedend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/time_table_bg"
+            android:visibility="gone">
+        
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTimeTableWeekend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+            android:id="@+id/llWeedend"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@color/xdt_timetable_background">
+        
+        <LinearLayout
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedendMonthTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="月"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:id="@+id/llWeekend1_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeekend1_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周一"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend1_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:id="@+id/llWeekend2_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend2_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周二"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend2_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:id="@+id/llWeekend3_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend3_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周三"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend3_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+                android:id="@+id/llWeekend4_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend4_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周四"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend4_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+                android:id="@+id/llWeekend5_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend5_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周五"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend5_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+                android:id="@+id/llWeekend6_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend6_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周六"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend6_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+                android:id="@+id/llWeekend7_Teacher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+            
+            <TextView
+                    android:id="@+id/tvWeedend7_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="周日"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+            
+            <TextView
+                    android:id="@+id/tvWeekend7_month_Teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#2D3241"
+                    android:gravity="center"/>
+        </LinearLayout>
+    
+    </LinearLayout>
+    
+    <android.support.v4.widget.NestedScrollView
+            android:layout_below="@id/llWeedend"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvMorningTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            
+            <TextView
+                    android:id="@+id/tvRest"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="午               休"
+                    android:gravity="center"
+                    android:background="@color/xdt_timetable_background"/>
+            
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvNoonTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/susp_edit"
+            app:backgroundTint="#FF8958"
+            app:elevation="5dp"
+            app:pressedTranslationZ="12dp"
+            app:fabSize="normal"
+            app:borderWidth="0dp"
+            app:rippleColor="#cccccc"
+            android:layout_gravity="right"/>
+    
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+</LinearLayout>

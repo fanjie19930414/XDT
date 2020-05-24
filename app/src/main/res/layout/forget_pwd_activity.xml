@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_status_bar_height"
+        layout="@layout/view_status_bar" />
+
+    <com.kotlin.baselibrary.custom.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="重置密码" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_login_forget_mobile"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/login_xdt_et_color"
+                android:textColorHint="#B4B4B4"
+                android:textSize="16sp" />
+
+            <com.kotlin.baselibrary.custom.VerifyButton
+                android:id="@+id/bt_verify_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/text_xdt_hint" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/view_login_forget_mobile"
+            layout="@layout/view_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_login_forget_verifycode"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/login_xdt_et_color"
+                android:textColorHint="#B4B4B4"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/view_login_forget_verifycode"
+            layout="@layout/view_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_login_forget_pwd"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入新密码(8-16位，同时包含数字和字母)"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/login_xdt_et_color"
+                android:textColorHint="#B4B4B4"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_login_forget_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/login_hidden" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/view_login_forget_pwd"
+            layout="@layout/view_line" />
+
+        <Button
+            android:id="@+id/bt_login_forget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/selector_blue_button"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="重置密码"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_login_forget_quick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="快捷登录"
+                android:textColor="@color/text_xdt"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

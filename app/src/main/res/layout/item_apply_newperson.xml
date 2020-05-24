@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civNewPersonIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:src="@mipmap/yukee"
+        app:civ_border_color="@color/common_white"
+        app:civ_border_width="1dp" />
+
+    <LinearLayout
+        android:id="@+id/llApplyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/civNewPersonIcon"
+        android:layout_marginStart="5dp"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvApplyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="陈钰琪"
+                android:textSize="16sp"
+                android:textColor="@color/text_xdt"/>
+
+            <TextView
+                android:id="@+id/tvTeacherApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="老师"
+                android:textColor="#FF6E1E"
+                android:background="@drawable/shape_gradient_orange2"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginStart="5dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvStudentApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学生"
+                android:textColor="#5ABE1E"
+                android:background="@drawable/shape_gradient_green2"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginStart="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvApplySubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表演"
+            android:textSize="14sp"
+            android:textColor="@color/text_xdt_hint" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAgreeApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="同意"
+        android:textSize="14sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/house_blue_press_btn"
+        android:textColor="@color/common_white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <TextView
+        android:id="@+id/tvRefuseApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不同意"
+        android:textSize="14sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/text_xdt_hint"
+        android:padding="8dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

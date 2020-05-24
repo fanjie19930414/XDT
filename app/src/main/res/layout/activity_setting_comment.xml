@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_white">
+
+    <include
+        android:id="@+id/view_status_bar_height"
+        layout="@layout/view_status_bar"/>
+
+    <com.kotlin.baselibrary.custom.HeaderBar
+        android:id="@+id/headerBar_TimetableChooseSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="设置常用评语">
+    </com.kotlin.baselibrary.custom.HeaderBar>
+
+    <TextView
+        android:id="@+id/tvAddNewSubject"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="+ 添加新的常用语"
+        android:textColor="@color/login_xdt_btn_color_able"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@color/xdt_background"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSettingComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

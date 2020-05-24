@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <com.kotlin.baselibrary.custom.CustomRoundAngleImageView
+        android:id="@+id/civMessageImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/news_icon_sys"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/civMessageImg"
+        android:padding="6dp"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvMessageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/text_xdt"
+            android:layout_marginBottom="6dp"
+            android:gravity="start"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingStart="6dp"/>
+
+        <TextView
+            android:id="@+id/tvMessageDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:layout_below="@id/tvMessageTitle"
+            android:paddingStart="6dp"/>
+
+        <TextView
+            android:id="@+id/tvMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:textColor="@color/text_xdt_hint"
+            android:padding="6dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvMessageRemind"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="99"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/common_white"
+            android:background="@drawable/shape_background_circle_red"
+            android:layout_below="@id/tvMessageTime"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

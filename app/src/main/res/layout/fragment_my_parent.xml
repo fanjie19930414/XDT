@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_status_bar"
+        layout="@layout/view_status_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlUserTop"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@mipmap/per_top_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rlInfoParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civIconParent"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="64dp"
+                        app:civ_border_color="@color/common_white"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_toEndOf="@id/civIconParent"
+                        android:textColor="@color/common_white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvUserDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvUserName"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/civIconParent"
+                        android:textColor="@color/common_white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/con_prev" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-85dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_background_corner">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="我的孩子"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btAddChild"
+                    android:layout_width="57dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/shape_btn_corner4_blue"
+                    android:text="添加"
+                    android:textColor="@color/common_white"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvChildrenList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btAddChild"
+                    android:padding="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlChangePWD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/ivPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="18dp"
+                    android:src="@mipmap/pers_password" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivPwd"
+                    android:text="重置密码"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16" />
+
+            <RelativeLayout
+                android:id="@+id/rlSysSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivSysSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="18dp"
+                    android:src="@mipmap/pers_sys_set" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivSysSetting"
+                    android:text="系统设置"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSuggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/ivSuggestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="18dp"
+                    android:src="@mipmap/pers_feedback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivSuggestion"
+                    android:text="意见反馈"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16" />
+
+            <RelativeLayout
+                android:id="@+id/rlCheckVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivCheckVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="18dp"
+                    android:src="@mipmap/pers_version" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivCheckVersion"
+                    android:text="检测版本"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rlAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/ivAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="18dp"
+                    android:src="@mipmap/pers_about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivAbout"
+                    android:text="关于学点通"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/prev_list_r" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line_magin16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

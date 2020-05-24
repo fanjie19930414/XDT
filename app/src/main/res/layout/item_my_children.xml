@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/rlChildrenHaveJoined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivChildrenHaveJoined"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/def_head_boy"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/common_white"/>
+
+            <TextView
+                    android:id="@+id/tvChildrenHaveJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陈钰琪"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@id/ivChildrenHaveJoined"
+                    android:drawableEnd="@mipmap/prev_list_r"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:layout_marginStart="12dp"
+                    android:padding="3dp"/>
+
+            <TextView
+                    android:id="@+id/tvChildrenHaveJoinedDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvChildrenHaveJoined"
+                    android:layout_toEndOf="@id/ivChildrenHaveJoined"
+                    android:layout_marginStart="12dp"
+                    android:text="小学一年三班"
+                    android:padding="3dp"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_10">
+
+                <LinearLayout
+                        android:id="@+id/llLeftHomeWork"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/dp_10">
+
+                    <TextView
+                            android:id="@+id/tvJoinedLeftHomeWork"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/login_xdt_btn_color_able"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剩余作业"
+                            android:padding="3dp"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="@color/xdt_background"
+                        android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                        android:id="@+id/llLeftNotice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/dp_10">
+
+                    <TextView
+                            android:id="@+id/tvJoinedLeftNotice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/login_xdt_btn_color_able"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未读通知"
+                            android:padding="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/rlChildrenNoJoined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivChildrenNoJoined"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/def_head_boy"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/common_white"/>
+
+            <TextView
+                    android:id="@+id/tvChildrenNoJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@id/ivChildrenNoJoined"
+                    android:drawableEnd="@mipmap/prev_list_r"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:layout_marginStart="12dp"
+                    android:padding="3dp"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:id="@+id/tvChildrenGoToJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加入班级"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/rlChildrenApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivChildrenApply"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/def_head_boy"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/common_white"/>
+
+            <TextView
+                    android:id="@+id/tvChildrenApply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@id/ivChildrenApply"
+                    android:drawableEnd="@mipmap/prev_list_r"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:layout_marginStart="12dp"
+                    android:padding="3dp"
+                    android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10">
+
+                <TextView
+                        android:id="@+id/tvChildrenApplyContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小学一年级三班"
+                        android:padding="5dp"
+                        android:textColor="@color/text_xdt"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(申请中)"
+                        android:textColor="@color/text_xdt"
+                        android:layout_gravity="center"
+                        android:padding="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

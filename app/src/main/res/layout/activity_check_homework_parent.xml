@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/lay_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCheckHomeWorkParent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivCheckHomeWorkBackParent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingRight="@dimen/common_padding"
+                android:src="@drawable/icon_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkTitleParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollViewParent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/common_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCheckHomeWorkContentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="@color/text_xdt"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkClassNameParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_xdt_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkStartTimeParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/text_xdt_hint"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civCheckHomeWorkParentIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/yukee" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCheckHomeWorkTeacherNameParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="张可(班主任+语文老师)"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkTypeParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_background_corner_blue_fill"
+                    android:paddingStart="6dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="4dp"
+                    android:text="课后实践"
+                    android:textColor="@color/login_xdt_btn_color_able"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkStatusParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/xdt_background"
+                    android:paddingStart="6dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="4dp"
+                    android:text="已结束"
+                    android:textColor="@color/text_xdt_hint"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkEndTimeParent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="截止时间：2019-06-25 12:30"
+                    android:textColor="@color/text_xdt_hint" />
+            </LinearLayout>
+
+            <com.kotlin.baselibrary.custom.MoreTextView
+                android:id="@+id/checkHomeWorkMoreParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/con_txt_shade"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                app:moreSwitchDrawable="@drawable/con_txt_down_arrow"
+                app:moreSwitchTextColor="#007AFF"
+                app:moreSwitchTextSize="14sp"
+                app:moreTextColor="@color/text_xdt"
+                app:moreTextSize="@dimen/sp_16" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvCheckHomeWorkPicParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@color/xdt_background" />
+
+            <TextView
+                android:id="@+id/tvCheckHomeWorkLeftTimeParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/login_xdt_et_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlCheckHomeWorkEditContentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/etCheckHomeWorkEditContentParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入内容"
+                    android:maxLength="1000"
+                    android:padding="16dp"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvCheckHomeWorkEditContentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etCheckHomeWorkEditContentParent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:padding="16dp"
+                    android:text="0/1000"
+                    android:textColor="@color/text_xdt_hint"
+                    android:textSize="@dimen/sp_16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCheckHomeWorkTextContentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/etCheckHomeWorkTextContentParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxLength="1000"
+                    android:padding="16dp"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCheckHomeWorkNoContentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivNoContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/def_null_child"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_below="@id/ivNoContent"
+                    android:id="@+id/etCheckHomeWorkNoContentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxLength="1000"
+                    android:padding="16dp"
+                    android:text="该作业您没有及时作答"
+                    android:textColor="@color/text_xdt_hint"
+                    android:textSize="14sp"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkImgUploadParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:padding="16dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvSendHomeWorkImgParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCheckHomeWorkImgParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCheckHomeWorkTeacherCommentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_white"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/teacherCommentView"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/xdt_background" />
+
+                <TextView
+                    android:layout_below="@id/teacherCommentView"
+                    android:id="@+id/tvParentTeacherComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="16dp"
+                    android:text="教师点评"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCheckHomeWorkTeacherComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvParentTeacherComment"
+                    android:padding="16dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llCheckHomeWorkParentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/house_blue_press_btn_corners"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/login_xdt_btn_color_able"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btPublish"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/house_blue_press_btn"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

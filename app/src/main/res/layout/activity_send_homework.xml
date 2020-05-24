@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xdt_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/state_bar"
+        layout="@layout/view_status_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlSendHomeWork"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_bar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivSendHomeWorkBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSendHomeWorkTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_xdt"
+                android:textSize="@dimen/text_large_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivSendHomeWorkSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            android:src="@mipmap/menu_menubar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/common_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkChooseClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvChooseClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="选择班级"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llHaveChooseClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape_background_corner_blue_fill"
+                        android:paddingStart="8dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/ivChooseClass"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvChooseClassName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/login_xdt_btn_color_able"
+                            android:textSize="@dimen/sp_12"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivDeleteChooseClass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/con_del_big"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="@dimen/dp_10"
+                            android:paddingEnd="5dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivChooseClass"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="16dp"
+                        android:src="@mipmap/prev_list_r"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/xdt_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkChooseType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="选择类型"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="16dp"
+                        android:src="@mipmap/prev_list_r" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/xdt_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkChooseSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="选择科目"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/xdt_usercenter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="16dp"
+                        android:src="@mipmap/prev_list_r" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/xdt_background"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkChooseEditTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white">
+
+                    <EditText
+                        android:id="@+id/etSendHomeWorkChooseEditTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="输入标题"
+                        android:padding="16dp"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:textSize="16sp"
+                        android:layout_toStartOf="@id/tvSendHomeWorkChooseEditTitle"
+                        android:maxLength="20" />
+
+                    <TextView
+                        android:id="@+id/tvSendHomeWorkChooseEditTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="16dp"
+                        android:text="0/20"
+                        android:textColor="@color/text_xdt_hint"
+                        android:textSize="@dimen/sp_16" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/xdt_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkChooseEditContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white">
+
+                    <EditText
+                        android:id="@+id/etSendHomeWorkChooseEditContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入内容"
+                        android:padding="16dp"
+                        android:textColor="@color/login_xdt_et_color"
+                        android:textSize="16sp"
+                        android:maxLength="1000"/>
+
+                    <TextView
+                        android:id="@+id/tvSendHomeWorkChooseEditContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:padding="16dp"
+                        android:text="0/1000"
+                        android:layout_below="@id/etSendHomeWorkChooseEditContent"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_xdt_hint"
+                        android:textSize="@dimen/sp_16" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHomeWorkImgUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_white"
+                    android:padding="16dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvSendHomeWorkImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSendHomeWorkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/common_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="截止时间"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvSendHomeWorkTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="35dp"
+                        android:padding="16dp"
+                        android:textColor="@color/text_xdt"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:src="@mipmap/prev_list_r" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btSendHomeWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/blue_button_height"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/selector_blue_button"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:text="马上发布"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

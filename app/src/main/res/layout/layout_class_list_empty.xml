@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+    
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/def_null_child"/>
+    
+    <TextView
+            android:id="@+id/tvEmptyContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前还没有加入班级哦~"
+            android:textColor="@color/text_xdt_hint"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_marginTop="@dimen/dp_40"
+            android:padding="5dp"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_class_list_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+    
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快去"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_content"/>
+    
+        <TextView
+                android:id="@+id/tvClassEmptyAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textColor="@color/login_xdt_btn_color_able"
+                android:textSize="@dimen/text_size_content"/>
+    
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="吧"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_content"/>
+    </LinearLayout>
+</LinearLayout>

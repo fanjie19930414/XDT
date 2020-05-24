@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="100dp">
+
+    <ImageView
+        android:id="@+id/empty_view_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/icon_state_error"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_view_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_view_sub_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:gravity="center"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_view_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/text_blue"
+        android:paddingStart="30dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        android:visibility="gone" />
+
+</LinearLayout>

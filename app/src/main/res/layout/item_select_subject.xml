@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/llSelectSubject"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:layout_margin="16dp"
+              android:background="@drawable/selector_timetable_background">
+    
+    <TextView
+            android:id="@+id/tvSelectSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数学"
+            android:textSize="16sp"
+            android:textColor="@color/text_xdt"
+            android:layout_gravity="center"/>
+    
+    <TextView
+            android:id="@+id/tvSelectTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="陈钰琪"
+            android:textSize="12sp"
+            android:textColor="@color/text_xdt_hint"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"/>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/shape_background_corner_blue_fill"
+          android:textColor="@color/login_xdt_btn_color_able"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:paddingStart="12dp"
+          android:paddingEnd="12dp"
+          android:layout_marginBottom="15dp"
+          android:layout_marginEnd="15dp">
+</TextView>

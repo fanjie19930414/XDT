@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivHomeWorkIsChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:padding="5dp"
+            android:src="@mipmap/chk_box_off"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHomeWorkClassName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一年级9班"
+                android:textColor="@color/text_xdt"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tvHomeWorkClassGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(2018级)"
+                android:textColor="@color/xdt_usercenter"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHomeWorkHaveChoose"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:hint="已选0人"
+            android:gravity="end"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/prev_list_r"
+            android:layout_marginStart="@dimen/dp_10"/>
+    </LinearLayout>
+</LinearLayout>

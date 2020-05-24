@@ -1,0 +1,166 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_left">10dp</dimen>
+    <dimen name="margin_right">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="padding_left">15dp</dimen>
+    <dimen name="padding_right">15dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+    <dimen name="padding_bottom">10dp</dimen>
+    <dimen name="home_item_margin">15dp</dimen>
+    <!-- 通用行高 -->
+    <dimen name="row_height_normal">50dp</dimen>
+    <!-- 通用字体大小 -->
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_content">12sp</dimen>
+    <!-- 通用间隔值 -->
+    <dimen name="gap_height">10dp</dimen>
+    <dimen name="row_margin">10dp</dimen>
+    <dimen name="popmenu_width">260dp</dimen>
+    <dimen name="popmenu_yoff">300dp</dimen>
+    <dimen name="pop_layout_y">0dp</dimen>
+    <dimen name="statusbar_bg_height">0dp</dimen>
+    <dimen name="statusbar_title_height">50dp</dimen>
+    <dimen name="share_img_margin_top">25dp</dimen>
+    <dimen name="blue_button_height">50dp</dimen>
+    <dimen name="blue_button_size">18dp</dimen>
+    <dimen name="size_default">160dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="house_promotion_item_height">50dp</dimen>
+    
+    <!--kotlin 项目-->
+    <dimen name="common_divider_height">1px</dimen>
+    <dimen name="common_divider_width">1px</dimen>
+    <dimen name="common_header_bar_height">50dp</dimen>
+    <dimen name="common_icon_height">60dp</dimen>
+    <dimen name="common_icon_width">60dp</dimen>
+    <dimen name="common_line_height">50dp</dimen>
+    <dimen name="common_margin">15dp</dimen>
+    <dimen name="common_margin_middle">10dp</dimen>
+    <dimen name="common_margin_small">5dp</dimen>
+    <dimen name="common_padding">15dp</dimen>
+    <dimen name="common_padding_middle">10dp</dimen>
+    <dimen name="common_padding_small">5dp</dimen>
+    <dimen name="common_radius">6dp</dimen>
+    <dimen name="common_border_size">1px</dimen>
+    
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_middle_size">14sp</dimen>
+    <dimen name="text_big_size">16sp</dimen>
+    <dimen name="text_large_size">18sp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+    
+    <!-- 透明度表 -->
+    <!--100  %	00-->
+    <!--99   %	03-->
+    <!--98   %	05-->
+    <!--97   %	07-->
+    <!--96   %	0A-->
+    <!--95   %	0D-->
+    <!--94   %	0F-->
+    <!--93   %	12-->
+    <!--92   %	14-->
+    <!--91   %	17-->
+    <!--90   %	1A-->
+    <!--89   %	1C-->
+    <!--88   %	1E-->
+    <!--87   %	21-->
+    <!--86   %	24-->
+    <!--85   %	26-->
+    <!--84   %	29-->
+    <!--83   %	2B-->
+    <!--82   %	2E-->
+    <!--81   %	30-->
+    <!--80   %	33-->
+    <!--79   %	36-->
+    <!--78   %	38-->
+    <!--77   %	3B-->
+    <!--76   %	3D-->
+    <!--75   %	40-->
+    <!--74   %	42-->
+    <!--73   %	45-->
+    <!--72   %	47-->
+    <!--71   %	4A-->
+    <!--70   %	4D-->
+    <!--69   %	4F-->
+    <!--68   %	52-->
+    <!--67   %	54-->
+    <!--66   %	57-->
+    <!--65   %	59-->
+    <!--64   %	5C-->
+    <!--63   %	5E-->
+    <!--62   %	61-->
+    <!--61   %	63-->
+    <!--60   %	66-->
+    <!--59   %	69-->
+    <!--58   %	6B-->
+    <!--57   %	6E-->
+    <!--56   %	70-->
+    <!--55   %	73-->
+    <!--54   %	75-->
+    <!--53   %	78-->
+    <!--52   %	7A-->
+    <!--51   %	7D-->
+    <!--50   %	80-->
+    <!--49   %	82-->
+    <!--48   %	85-->
+    <!--47   %	87-->
+    <!--46   %	8A-->
+    <!--45   %	8C-->
+    <!--44   %	8F-->
+    <!--43   %	91-->
+    <!--42   %	94-->
+    <!--41   %	96-->
+    <!--40   %	99-->
+    <!--39   %	9C-->
+    <!--38   %	9E-->
+    <!--37   %	A1-->
+    <!--36   %	A3-->
+    <!--35   %	A6-->
+    <!--34   %	A8-->
+    <!--33   %	AB-->
+    <!--32   %	AD-->
+    <!--31   %	B0-->
+    <!--30   %	B3-->
+    <!--29   %	B5-->
+    <!--28   %	B8-->
+    <!--27   %	BA-->
+    <!--26   %	BD-->
+    <!--25   %	BF-->
+    <!--24   %	C2-->
+    <!--23   %	C4-->
+    <!--22   %	C7-->
+    <!--21   %	C9-->
+    <!--20   %	CC-->
+    <!--19   %	CF-->
+    <!--18   %	D1-->
+    <!--17   %	D4-->
+    <!--16   %	D6-->
+    <!--15   %	D9-->
+    <!--14   %	DB-->
+    <!--13   %	DE-->
+    <!--12   %	E0-->
+    <!--11   %	E3-->
+    <!--10   %	E6-->
+    <!--9    %	E8-->
+    <!--8    %	EB-->
+    <!--7    %	ED-->
+    <!--6    %	F0-->
+    <!--5    %	F2-->
+    <!--4    %	F5-->
+    <!--3    %	F7-->
+    <!--2    %	FA-->
+    <!--1    %	FC-->
+    <!--0    %	FF -->
+   
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fff1f2f6">
+    
+    <include
+            android:id="@+id/view_status_bar_height"
+            layout="@layout/view_status_bar"/>
+    
+    <com.kotlin.baselibrary.custom.HeaderBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="添加孩子"/>
+    
+    <RelativeLayout
+            android:id="@+id/rlAddChildIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_white"
+            android:layout_marginTop="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="头像"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_xdt"/>
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civAddChildIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/def_head_boy"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/common_white"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"/>
+        
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/prev_list_r"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="12dp">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <EditText
+                android:id="@+id/etAddChild"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="start"
+                android:padding="16dp"
+                android:hint="请填写孩子的真实姓名"
+                android:singleLine="true"
+                android:textColor="@color/login_xdt_et_color"
+                android:textColorHint="@color/text_xdt_hint"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                android:maxLength="10"/>
+    
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/right_arrow"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="16dp"/>
+    
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line_magin16"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rlAddChildSex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tvAddChildSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line_magin16"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生日"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rlAddChildBirthday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tvAddChildBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="生日当天可能收到小惊喜哦~"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <include
+            layout="@layout/view_line_magin16"/>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关系"
+                android:textColor="@color/login_xdt_et_color"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="50dp"/>
+        
+        <RelativeLayout
+                android:id="@+id/rlAddChildRelation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="16dp">
+            
+            <TextView
+                    android:id="@+id/tvAddChildRelation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="您与孩子的关系"
+                    android:textColorHint="@color/text_xdt_hint"
+                    android:textColor="@color/login_xdt_et_color"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="30dp"/>
+            
+            <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right_arrow"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*姓名、性别和您与孩子的关系为必填项。"
+                android:textColor="@color/text_xdt_hint"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"/>
+    </RelativeLayout>
+    
+    <Button
+            android:id="@+id/btAddChild"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/blue_button_height"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/selector_blue_button"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:enabled="false"/>
+
+</LinearLayout>

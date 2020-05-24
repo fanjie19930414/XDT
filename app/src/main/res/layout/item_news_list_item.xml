@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <com.kotlin.baselibrary.custom.CustomRoundAngleImageView
+        android:id="@+id/civNewsImg"
+        android:layout_width="115dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvNewsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_xdt"
+        android:layout_marginEnd="6dp"
+        android:gravity="start"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_toStartOf="@id/civNewsImg"/>
+
+    <TextView
+        android:id="@+id/tvNewsTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

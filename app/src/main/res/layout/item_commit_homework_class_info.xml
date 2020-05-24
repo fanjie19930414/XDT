@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCommitClassInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/text_xdt"
+        android:text="2018级一年级9班(3人)"/>
+
+    <ImageView
+        android:id="@+id/ivCommitClassInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/prev_list_d"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

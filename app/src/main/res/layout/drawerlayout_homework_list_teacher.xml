@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvHomeWorkState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作业状态"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHomeWorkState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvHomeWorkState"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkFinishState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvHomeWorkFinishState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="班级完成情况"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHomeWorkFinishState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvHomeWorkFinishState"
+                    android:layout_marginTop="20dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyHomeWorkSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvMyHomeWorkSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作业科目"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHomeWorkSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMyHomeWorkSubject"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvHomeWorkTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布时间"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llHomeWorkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/tvHomeWorkTime"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkTimeBegin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_homework_list_background"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:hint="开始日期"
+                        android:padding="@dimen/dp_10"
+                        android:textColor="@drawable/selector_homework_list_text_color"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/viewHomeWorkTime"
+                        android:layout_width="10dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@color/common_black" />
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkTimeEnd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_homework_list_background"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:hint="结束日期"
+                        android:padding="@dimen/dp_10"
+                        android:textColor="@drawable/selector_homework_list_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHomeWorkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llHomeWorkTime"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHomeWorkClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvHomeWorkClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="班级"
+                    android:textColor="@color/text_xdt"
+                    android:textSize="@dimen/text_large_size"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHomeWorkClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvHomeWorkClass"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btHomeWorkClear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape_background_bottom_corner"
+            android:text="重置"
+            android:textColor="@color/text_xdt"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btHomeWorkConfirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/login_xdt_btn_color_able"
+            android:text="确定"
+            android:textColor="@color/common_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
